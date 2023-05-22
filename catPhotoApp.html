@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Atributo p/ agregar idioma -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Photo App</title> <!-- Título de la página -->
+</head>
+
+<body>
+    <main> <!-- Contenido principal -->
+
+        <h1>Cat Photo App</h1> <!-- Titulo principal o encabezado (Heading) -->
+        <a href="#catPhotos">Cat Photos</a> 
+        <a href="#catLists">Cat Lists</a>
+        <a href="#catForm">Cat Form</a> <!-- P/ crear un enlace que lleve a una sección de la misma pág se usa el atributo id="" en el elemento al cual queremos ir -->
+
+        <hr> <!-- "horizontal rule" Línea horizontal para separar párrafos o secciones -->
+
+        <!-- SECCIÓN 1 -->
+        <section id="catPhotos"> <!-- Se usa p/ dividir la página por secciones: -->
+            <h2>Cat Photos</h2>
+            <!-- TODO: Add link to cat photos -->
+            <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+            <!-- target="_blank" es p/ abrir el link en una nueva pestaña -->
+            <a href="https://freecatphotoapp.com"> <!-- href es p/ especificar el destino de un enlace -->
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" 
+                    alt="A cute orange cat lying on its back."> <!-- src="ruta/de/la/imagen" y alt="descripción breve de la imagen" -->
+            </a>
+        </section>
+
+        <hr>
+
+        <!-- SECCIÓN 2 -->
+        <section id="catLists">
+            <h2>Cat Lists</h2>
+            <h3>Things cats love:</h3>
+            <ul> <!-- Lista desordenada -->
+                <li>cat nip</li>
+                <li>laser pointers</li>
+                <li><s>lasagna</s></li> <!-- "s" se usa para tachar una palabra-->
+            </ul>
+            <figure> <!-- Se usa p/ agrupar contenido como imágenes, gráficos o diagramas. Es como un contenedor para ese tipo de elementos. -->
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+                    alt="A slice of lasagna on a plate.">
+                <figcaption>Cats <em>love</em> lasagna.</figcaption>  <!-- figcaption es para agregar una descripción a figure. --> <!-- em es para hacer cursiva -->
+            </figure>
+            <h3>Top 3 things cats hate:</h3>
+            <ol> <!-- Lista ordenada -->
+                <li>flea treatment</li>
+                <li>thunder</li>
+                <li>other cats</li>
+            </ol>
+            <figure>
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+                    alt="Five cats looking around a field.">
+                <figcaption>Cats <strong>hate</strong> other cats.</figcaption> <!-- P/ mostrar un texto en negrita se usa strong -->
+            </figure>
+        </section>
+
+        <hr>
+
+        <!-- SECCIÓN 3 -->
+        <section id="catForm">
+            <h2>Cat Form</h2>
+            <form action="https://freecatphotoapp.com/submit-cat-photo"> <!-- "action" especifíca la URL del servidor que procesará los datos enviados a través del form -->
+                <fieldset> <!--  Se usa para agrupar elementos relacionados en un formulario -->
+                    <legend>Is your cat an indoor or outdoor cat?</legend>
+                    <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label> <!-- label sirve p/ englobar todo y que cuando se haga click en el texto también seleccione la opción -->
+                    <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label> <!-- type="radio" se utiliza en los input p/ crear botones que permiten seleccionar una sola opción de un conjunto de opciones relacionadas -->
+                    <!-- Para que se marque solo una opción hay que poner a los dos botones con el mismo name="" -->
+                </fieldset><br>
+                <fieldset>
+                    <legend>What's your cat's personality?</legend>
+                    <input id="loving" type="checkbox" name="personality" value="loving" checked> <label
+                        for="loving">Loving</label>
+                    <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+                    <input id="energetic" type="checkbox" name="personality" value="energetic"> <label
+                        for="energetic">Energetic</label>
+                </fieldset>
+                <input type="text" name="catphotourl" placeholder="cat photo URL" required> <!-- "placeholder" es p/ mostrar texto de fondo en el form y required indica que el campo es obligatorio -->
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>
+            No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+        </p>
+    </footer>
+</body>
+
+</html>
